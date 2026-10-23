@@ -10,6 +10,7 @@ from .cifar10 import CIFAR10
 from .cifar10_c import CIFAR10C
 from .cifar100 import CIFAR100
 from .cifar100_c import CIFAR100C
+from .citrus_leaves import CitrusLeaves
 from .clevrer import CLEVRER
 from .country211 import Country211
 from .cub200 import CUB200
@@ -45,9 +46,11 @@ from .stl10 import STL10
 from .svhn import SVHN
 from .tiny_imagenet import TinyImagenet
 from .tiny_imagenet_c import TinyImagenetC
+from .trashnet import TrashNet
 
 
 __all__ = [
+    "CitrusLeaves",
     "ArabicCharacters",
     "ArabicDigits",
     "AWA2",
@@ -86,6 +89,7 @@ __all__ = [
     "SmallNORB",
     "STL10",
     "SVHN",
+    "TrashNet",
     "TinyImagenet",
     "TinyImagenetC",
 ]
