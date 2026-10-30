@@ -14,9 +14,20 @@ from stable_datasets.utils import BaseDatasetBuilder
 
 
 class TrashNet(BaseDatasetBuilder):
-    """TrashNet image classification dataset with six waste classes."""
+    """TrashNet waste classification with 2,527 RGB images in six classes.
 
-    VERSION = Version("1.0.1")
+    Classes contain 403 cardboard, 501 glass, 410 metal, 594 paper,
+    482 plastic, and 137 trash images. The resized images are 512 x 384.
+    Within each class, archive paths are sorted lexicographically and
+    every fifth image (zero-based indices 0, 5, 10, ...) goes to ``test``.
+    The remaining images form ``train``: 2,019 training and 508 test images.
+    This deterministic partition is defined by this builder, not an
+    official split. macOS metadata entries are excluded.
+
+    Homepage: https://github.com/garythung/trashnet
+    """
+
+    VERSION = Version("1.0.0")
 
     DATA_URL = "https://huggingface.co/datasets/garythung/trashnet/resolve/main/dataset-resized.zip"
 
@@ -32,7 +43,13 @@ class TrashNet(BaseDatasetBuilder):
                 filename="trashnet-resized.zip",
             ),
         },
-        citation=("Thung, G. and Yang, M. (2016). Classification of Trash for Recyclability Status. Stanford CS229."),
+        citation="""@misc{thung2016trashnet,
+    author = {Thung, Gary and Yang, Mindy},
+    title = {{TrashNet}: Dataset of Images of Trash},
+    year = {2016},
+    howpublished = {GitHub repository},
+    url = {https://github.com/garythung/trashnet}
+}""",
         license="MIT",
     )
 

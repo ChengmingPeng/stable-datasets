@@ -12,8 +12,8 @@ from .cifar10 import CIFAR10
 from .cifar10_c import CIFAR10C
 from .cifar100 import CIFAR100
 from .cifar100_c import CIFAR100C
-from .citrus_leaves import CitrusLeaves
 from .cinic10 import CINIC10
+from .citrus_leaves import CitrusLeaves
 from .clevrer import CLEVRER
 from .coil100 import COIL100
 from .country211 import Country211
@@ -74,7 +74,6 @@ from .usps import USPS
 
 
 __all__ = [
-    "CitrusLeaves",
     "ArabicCharacters",
     "ArabicDigits",
     "AWA2",
@@ -88,6 +87,7 @@ __all__ = [
     "CIFAR100",
     "CIFAR100C",
     "CINIC10",
+    "CitrusLeaves",
     "CLEVRER",
     "COIL100",
     "Country211",
@@ -135,8 +135,8 @@ __all__ = [
     "StanfordDogs",
     "SUN397",
     "SVHN",
-    "TrashNet",
     "TinyImagenet",
     "TinyImagenetC",
+    "TrashNet",
     "USPS",
 ]

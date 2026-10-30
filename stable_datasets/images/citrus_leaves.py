@@ -8,7 +8,16 @@ from stable_datasets.utils import BaseDatasetBuilder
 
 
 class CitrusLeaves(BaseDatasetBuilder):
-    """Dataset builder for citrus leaf disease classification."""
+    """Citrus leaf disease classification with 594 RGB images in four classes.
+
+    Labels are Black spot, canker, greening, and healthy. Only the leaf
+    images in the downloaded Citrus archive are included; fruit images
+    are excluded. All 594 images form the ``train`` split, since the source
+    provides no official train/test partition. Create a separate holdout
+    for evaluation.
+
+    Homepage: https://data.mendeley.com/datasets/3f83gxmv57/2
+    """
 
     VERSION = Version("1.0.0")
 
@@ -17,7 +26,17 @@ class CitrusLeaves(BaseDatasetBuilder):
         assets={
             "train": "https://data.mendeley.com/public-files/datasets/3f83gxmv57/files/53398b67-6f0e-4a67-8384-e2b574b2ebf4/file_downloaded",
         },
-        citation="Rauf et al. (2019). Citrus Fruits and Leaves Dataset. DOI: 10.17632/3f83gxmv57.2",
+        citation="""@misc{rauf2019citrus,
+    author = {Rauf, Hafiz Tayyab and Saleem, Basharat Ali and Lali, M. Ikram Ullah
+              and Khan, Muhammad Attique and Sharif, Muhammad and Bukhari, Syed Ahmad Chan},
+    title = {A Citrus Fruits and Leaves Dataset for Detection and Classification
+             of Citrus Diseases through Machine Learning},
+    year = {2019},
+    publisher = {Mendeley Data},
+    version = {2},
+    doi = {10.17632/3f83gxmv57.2},
+    url = {https://data.mendeley.com/datasets/3f83gxmv57/2}
+}""",
     )
 
     def _info(self):
